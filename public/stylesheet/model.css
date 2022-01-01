@@ -12,7 +12,8 @@
 	.navbar {
 		position: fixed;
 		z-index: 999;
-		width: 500px;
+		width: calc(100% - 500px);
+		min-width: 450px;
 		height: calc(100% - 80px);
 		gap: 0;
 		align-items: flex-start;

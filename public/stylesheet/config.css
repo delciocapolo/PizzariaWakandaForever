@@ -12,6 +12,9 @@
 	--primaryColorText: var(
 		--primaryLight
 	); /*Estou chamando o primaryLight(Que esta la em cima)*/
+	--secundaryColorText: var(
+		--secundaryLight
+	); /*Estou chamando o primaryLight(Que esta la em cima)*/
 	--mediumBorder: 10px;
 	--totalBorder: 50px;
 	--cardSugestaoBorder: 26.9081px;
