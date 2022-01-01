@@ -16,8 +16,8 @@
             <article class="welcome backgroundImage">
                 <div class="fillSpace"></div>
                 <div class="logo display-flex">
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link-logo">Pizzaria Wakanda <br>Forever</a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link-logo">Pizzaria Wakanda <br>Forever</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link-logo">Wakanda Forever</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link-logo">Wakanda Forever</a>
                 </div>
             </article>
             <article class="container-tools">
@@ -46,7 +46,181 @@
                 <nav class="container-sugestoes display-flex">
                     <%for(let i = 0; i < 4; i++) {%>
                         <div class="box-sugestoes">
-                            <div class="card-sugestao display-grid">
+                            <a href="http://" target="_self" class="card-sugestao display-grid">
+                                <div class="informacao-pizza backgroundImage">
+                                    
+                                    <div class="detalhes-pizza change-detalhes-pizza display-flex flex-space-between">
+                                        <div class="container-btns-actions change-btn-action display-flex">
+                                            <div class="send">
+                                                <button type="button" class="btn-send-pizza btn-action">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tamanho-item-menu">
+                                                        <path d="M476.59,227.05l-.16-.07L49.35,49.84A23.56,23.56,0,0,0,27.14,52,24.65,24.65,0,0,0,16,72.59V185.88a24,24,0,0,0,19.52,23.57l232.93,43.07a4,4,0,0,1,0,7.86L35.53,303.45A24,24,0,0,0,16,327V440.31A23.57,23.57,0,0,0,26.59,460a23.94,23.94,0,0,0,13.22,4,24.55,24.55,0,0,0,9.52-1.93L476.4,285.94l.19-.09a32,32,0,0,0,0-58.8Z" class="svg-send"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <h1 class="title change-text-1">Informações</h1>
+                                        </div>
+                                        <div class="container-btns-actions change-btn-action display-flex">
+                                            <div class="send">
+                                                <button type="button" class="btn-love-pizza btn-action">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tamanho-item-menu">
+                                                        <path d="M352.92,80C288,80,256,144,256,144s-32-64-96.92-64C106.32,80,64.54,124.14,64,176.81c-1.1,109.33,86.73,187.08,183,252.42a16,16,0,0,0,18,0c96.26-65.34,184.09-143.09,183-252.42C447.46,124.14,405.68,80,352.92,80Z" class="svg-loved"/>
+                                                        <!-- <path d="M352.92,80C288,80,256,144,256,144s-32-64-96.92-64C106.32,80,64.54,124.14,64,176.81c-1.1,109.33,86.73,187.08,183,252.42a16,16,0,0,0,18,0c96.26-65.34,184.09-143.09,183-252.42C447.46,124.14,405.68,80,352.92,80Z" style="fill:none; stroke: var(--temporality);stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/> -->
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="foto-pizza">
+                                        <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
+                                    </div>
+                                    <div class="detalhes-pizza display-flex">
+                                        <h1 class="title change-text-2">Pizza-Omolete</h1>
+                                        <h2 class="price change-text-3">2000,00kz</h2>
+                                    </div>
+                                    <div class="descricao-texto-pizza">
+                                        <div class="detalhes-pizza display-flex flex-left">
+                                            <h1 class="title flex-left change-text-1">classificação</h1>
+                                            <div class="classificacao flex-left">
+                                                <span class="avalicao-numero">4.1</span>
+                                                <div class="images-estrela-avalicao display-flex">
+                                                    <%for(let i = 0; i < 5; i++) {%>
+                                                        <div class="avalicao-estrela">
+                                                            <svg width="14" height="14" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.87222 1.09002C6.37466 0.136657 7.75326 0.13666 8.2557 1.09002L9.5935 3.62846C9.59616 3.63351 9.60113 3.63697 9.60683 3.63774L12.5338 4.03603C13.6592 4.18917 14.097 5.56916 13.262 6.33137L11.1932 8.21979C11.1888 8.22386 11.1867 8.22992 11.1878 8.23584L11.6827 10.9379C11.8799 12.0148 10.7517 12.8534 9.76148 12.3659L7.07187 11.0418C7.06689 11.0393 7.06103 11.0393 7.05605 11.0418L4.36644 12.3659C3.37622 12.8534 2.24798 12.0148 2.44522 10.9379L2.9401 8.23584C2.94119 8.22992 2.93914 8.22386 2.93467 8.21978L0.8659 6.33137C0.0308934 5.56916 0.468712 4.18917 1.59412 4.03603L4.52109 3.63774C4.52679 3.63697 4.53176 3.63351 4.53442 3.62846L5.87222 1.09002Z" fill="#F24E1E" stroke="#F24E1E"/>
+                                                            </svg>
+                                                        </div>
+                                                    <%}%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detalhes-pizza display-flex flex-left mg-top">
+                                            <h1 class="title flex-left change-text-1">descrição</h1>
+                                            <p class="texto-descricao-pizza">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi accusantium et vitae ipsam fuga cupiditate dolorum totam commodi suscipit facere. Cum voluptas inventore reprehenderit iusto culpa deserunt nulla, quod illo.
+                                            </p>
+                                        </div>
+                                        <div class="detalhes-pizza display-flex flex-left mg-top">
+                                            <h1 class="title change-text-1">Quantidade</h1>
+                                            <div class="container-btns-actions display-flex">
+                                                <div class="add-remove display-grid">
+                                                    <button type="button" class="btn-add-pizza btn-action">+</button>
+                                                    <h2 class="count-quantidade-pizza">2</h2>
+                                                    <button type="button" class="btn-remove-pizza btn-action">-</button>
+                                                </div>
+                                                <div class="send">
+                                                    <button type="button" class="btn-send-pizza btn-action">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tamanho-item-menu">
+                                                            <path d="M476.59,227.05l-.16-.07L49.35,49.84A23.56,23.56,0,0,0,27.14,52,24.65,24.65,0,0,0,16,72.59V185.88a24,24,0,0,0,19.52,23.57l232.93,43.07a4,4,0,0,1,0,7.86L35.53,303.45A24,24,0,0,0,16,327V440.31A23.57,23.57,0,0,0,26.59,460a23.94,23.94,0,0,0,13.22,4,24.55,24.55,0,0,0,9.52-1.93L476.4,285.94l.19-.09a32,32,0,0,0,0-58.8Z" class="svg-send"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="foto-pizza">
+                                    <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
+                                </div>
+                                <div class="detalhes-pizza display-flex">
+                                    <h1 class="title">Pizza-Omolete</h1>
+                                    <h2 class="price">2000,00kz</h2>
+                                    <div class="classificacao">
+                                        <span class="avalicao-numero">4.1</span>
+                                        <div class="images-estrela-avalicao display-flex">
+                                            <%for(let i = 0; i < 5; i++) {%>
+                                                <div class="avalicao-estrela">
+                                                    <svg width="14" height="14" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.87222 1.09002C6.37466 0.136657 7.75326 0.13666 8.2557 1.09002L9.5935 3.62846C9.59616 3.63351 9.60113 3.63697 9.60683 3.63774L12.5338 4.03603C13.6592 4.18917 14.097 5.56916 13.262 6.33137L11.1932 8.21979C11.1888 8.22386 11.1867 8.22992 11.1878 8.23584L11.6827 10.9379C11.8799 12.0148 10.7517 12.8534 9.76148 12.3659L7.07187 11.0418C7.06689 11.0393 7.06103 11.0393 7.05605 11.0418L4.36644 12.3659C3.37622 12.8534 2.24798 12.0148 2.44522 10.9379L2.9401 8.23584C2.94119 8.22992 2.93914 8.22386 2.93467 8.21978L0.8659 6.33137C0.0308934 5.56916 0.468712 4.18917 1.59412 4.03603L4.52109 3.63774C4.52679 3.63697 4.53176 3.63351 4.53442 3.62846L5.87222 1.09002Z" fill="#F24E1E" stroke="#F24E1E"/>
+                                                    </svg>
+                                                </div>
+                                            <%}%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-carrinho-sugestao">
+                                    <button type="button" class="carrinho-sugestao display-flex">
+                                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="tamanho-item-menu">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.6C0 0.716344 0.6986 0 1.56037 0H2.75238C4.52546 0 6.14635 1.02721 6.93929 2.65338L7.20583 3.2H27.3171C30.3117 3.2 32.5363 6.0436 31.8866 9.04126L30.1529 17.0413C29.677 19.2374 27.7774 20.8 25.5833 20.8H11.8656C9.67156 20.8 7.7719 19.2374 7.29594 17.0413L4.75994 5.33936L4.14802 4.08446C3.88371 3.5424 3.3434 3.2 2.75238 3.2H1.56037C0.6986 3.2 0 2.48365 0 1.6ZM8.18666 6.4L10.3424 16.347C10.501 17.0792 11.1342 17.6 11.8656 17.6H25.5833C26.3147 17.6 26.9479 17.0792 27.1064 16.347L28.8403 8.34709C29.0567 7.34787 28.3152 6.4 27.3171 6.4H8.18666ZM12.4829 25.6C11.6212 25.6 10.9226 26.3163 10.9226 27.2C10.9226 28.0837 11.6212 28.8 12.4829 28.8C13.3447 28.8 14.0433 28.0837 14.0433 27.2C14.0433 26.3163 13.3447 25.6 12.4829 25.6ZM7.80184 27.2C7.80184 24.549 9.89765 22.4 12.4829 22.4C15.0682 22.4 17.1641 24.549 17.1641 27.2C17.1641 29.851 15.0682 32 12.4829 32C9.89765 32 7.80184 29.851 7.80184 27.2ZM24.9659 25.6C24.1041 25.6 23.4055 26.3163 23.4055 27.2C23.4055 28.0837 24.1041 28.8 24.9659 28.8C25.8277 28.8 26.5263 28.0837 26.5263 27.2C26.5263 26.3163 25.8277 25.6 24.9659 25.6ZM20.2848 27.2C20.2848 24.549 22.3805 22.4 24.9659 22.4C27.5513 22.4 29.647 24.549 29.647 27.2C29.647 29.851 27.5513 32 24.9659 32C22.3805 32 20.2848 29.851 20.2848 27.2Z" class="cor-item-menu"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </a>
+                            <a href="http://" target="_self" class="card-sugestao display-grid">
+                                <div class="informacao-pizza backgroundImage">
+                                    
+                                    <div class="detalhes-pizza change-detalhes-pizza display-flex flex-space-between">
+                                        <div class="container-btns-actions change-btn-action display-flex">
+                                            <div class="send">
+                                                <button type="button" class="btn-send-pizza btn-action">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tamanho-item-menu">
+                                                        <path d="M476.59,227.05l-.16-.07L49.35,49.84A23.56,23.56,0,0,0,27.14,52,24.65,24.65,0,0,0,16,72.59V185.88a24,24,0,0,0,19.52,23.57l232.93,43.07a4,4,0,0,1,0,7.86L35.53,303.45A24,24,0,0,0,16,327V440.31A23.57,23.57,0,0,0,26.59,460a23.94,23.94,0,0,0,13.22,4,24.55,24.55,0,0,0,9.52-1.93L476.4,285.94l.19-.09a32,32,0,0,0,0-58.8Z" class="svg-send"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <h1 class="title change-text-1">Informações</h1>
+                                        </div>
+                                        <div class="container-btns-actions change-btn-action display-flex">
+                                            <div class="send">
+                                                <button type="button" class="btn-love-pizza btn-action">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tamanho-item-menu">
+                                                        <path d="M352.92,80C288,80,256,144,256,144s-32-64-96.92-64C106.32,80,64.54,124.14,64,176.81c-1.1,109.33,86.73,187.08,183,252.42a16,16,0,0,0,18,0c96.26-65.34,184.09-143.09,183-252.42C447.46,124.14,405.68,80,352.92,80Z" class="svg-loved"/>
+                                                        <!-- <path d="M352.92,80C288,80,256,144,256,144s-32-64-96.92-64C106.32,80,64.54,124.14,64,176.81c-1.1,109.33,86.73,187.08,183,252.42a16,16,0,0,0,18,0c96.26-65.34,184.09-143.09,183-252.42C447.46,124.14,405.68,80,352.92,80Z" style="fill:none; stroke: var(--temporality);stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/> -->
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="foto-pizza">
+                                        <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
+                                    </div>
+                                    <div class="detalhes-pizza display-flex">
+                                        <h1 class="title change-text-2">Pizza-Omolete</h1>
+                                        <h2 class="price change-text-3">2000,00kz</h2>
+                                    </div>
+                                    <div class="descricao-texto-pizza">
+                                        <div class="detalhes-pizza display-flex flex-left">
+                                            <h1 class="title flex-left change-text-1">classificação</h1>
+                                            <div class="classificacao flex-left">
+                                                <span class="avalicao-numero">4.1</span>
+                                                <div class="images-estrela-avalicao display-flex">
+                                                    <%for(let i = 0; i < 5; i++) {%>
+                                                        <div class="avalicao-estrela">
+                                                            <svg width="14" height="14" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.87222 1.09002C6.37466 0.136657 7.75326 0.13666 8.2557 1.09002L9.5935 3.62846C9.59616 3.63351 9.60113 3.63697 9.60683 3.63774L12.5338 4.03603C13.6592 4.18917 14.097 5.56916 13.262 6.33137L11.1932 8.21979C11.1888 8.22386 11.1867 8.22992 11.1878 8.23584L11.6827 10.9379C11.8799 12.0148 10.7517 12.8534 9.76148 12.3659L7.07187 11.0418C7.06689 11.0393 7.06103 11.0393 7.05605 11.0418L4.36644 12.3659C3.37622 12.8534 2.24798 12.0148 2.44522 10.9379L2.9401 8.23584C2.94119 8.22992 2.93914 8.22386 2.93467 8.21978L0.8659 6.33137C0.0308934 5.56916 0.468712 4.18917 1.59412 4.03603L4.52109 3.63774C4.52679 3.63697 4.53176 3.63351 4.53442 3.62846L5.87222 1.09002Z" fill="#F24E1E" stroke="#F24E1E"/>
+                                                            </svg>
+                                                        </div>
+                                                    <%}%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detalhes-pizza display-flex flex-left mg-top">
+                                            <h1 class="title flex-left change-text-1">descrição</h1>
+                                            <p class="texto-descricao-pizza">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi accusantium et vitae ipsam fuga cupiditate dolorum totam commodi suscipit facere. Cum voluptas inventore reprehenderit iusto culpa deserunt nulla, quod illo.
+                                            </p>
+                                        </div>
+                                        <div class="detalhes-pizza display-flex flex-left mg-top">
+                                            <h1 class="title change-text-1">Quantidade</h1>
+                                            <div class="container-btns-actions display-flex">
+                                                <div class="add-remove display-grid">
+                                                    <button type="button" class="btn-add-pizza btn-action">+</button>
+                                                    <h2 class="count-quantidade-pizza">2</h2>
+                                                    <button type="button" class="btn-remove-pizza btn-action">-</button>
+                                                </div>
+                                                <div class="send">
+                                                    <button type="button" class="btn-send-pizza btn-action">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="tamanho-item-menu">
+                                                            <path d="M476.59,227.05l-.16-.07L49.35,49.84A23.56,23.56,0,0,0,27.14,52,24.65,24.65,0,0,0,16,72.59V185.88a24,24,0,0,0,19.52,23.57l232.93,43.07a4,4,0,0,1,0,7.86L35.53,303.45A24,24,0,0,0,16,327V440.31A23.57,23.57,0,0,0,26.59,460a23.94,23.94,0,0,0,13.22,4,24.55,24.55,0,0,0,9.52-1.93L476.4,285.94l.19-.09a32,32,0,0,0,0-58.8Z" class="svg-send"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="foto-pizza">
                                     <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
                                 </div>
@@ -73,35 +247,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                            </div>
-                            <div class="card-sugestao display-grid">
-                                <div class="foto-pizza">
-                                    <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
-                                </div>
-                                <div class="detalhes-pizza display-flex">
-                                    <h1 class="title">Pizza-Omolete</h1>
-                                    <h2 class="price">2000,00kz</h2>
-                                    <div class="classificacao">
-                                        <span class="avalicao-numero">4.1</span>
-                                        <div class="images-estrela-avalicao display-flex">
-                                            <%for(let i = 0; i < 5; i++) {%>
-                                                <div class="avalicao-estrela">
-                                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.87222 1.09002C6.37466 0.136657 7.75326 0.13666 8.2557 1.09002L9.5935 3.62846C9.59616 3.63351 9.60113 3.63697 9.60683 3.63774L12.5338 4.03603C13.6592 4.18917 14.097 5.56916 13.262 6.33137L11.1932 8.21979C11.1888 8.22386 11.1867 8.22992 11.1878 8.23584L11.6827 10.9379C11.8799 12.0148 10.7517 12.8534 9.76148 12.3659L7.07187 11.0418C7.06689 11.0393 7.06103 11.0393 7.05605 11.0418L4.36644 12.3659C3.37622 12.8534 2.24798 12.0148 2.44522 10.9379L2.9401 8.23584C2.94119 8.22992 2.93914 8.22386 2.93467 8.21978L0.8659 6.33137C0.0308934 5.56916 0.468712 4.18917 1.59412 4.03603L4.52109 3.63774C4.52679 3.63697 4.53176 3.63351 4.53442 3.62846L5.87222 1.09002Z" fill="#F24E1E" stroke="#F24E1E"/>
-                                                    </svg>
-                                                </div>
-                                            <%}%>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container-carrinho-sugestao">
-                                    <button type="button" class="carrinho-sugestao display-flex">
-                                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="tamanho-item-menu">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.6C0 0.716344 0.6986 0 1.56037 0H2.75238C4.52546 0 6.14635 1.02721 6.93929 2.65338L7.20583 3.2H27.3171C30.3117 3.2 32.5363 6.0436 31.8866 9.04126L30.1529 17.0413C29.677 19.2374 27.7774 20.8 25.5833 20.8H11.8656C9.67156 20.8 7.7719 19.2374 7.29594 17.0413L4.75994 5.33936L4.14802 4.08446C3.88371 3.5424 3.3434 3.2 2.75238 3.2H1.56037C0.6986 3.2 0 2.48365 0 1.6ZM8.18666 6.4L10.3424 16.347C10.501 17.0792 11.1342 17.6 11.8656 17.6H25.5833C26.3147 17.6 26.9479 17.0792 27.1064 16.347L28.8403 8.34709C29.0567 7.34787 28.3152 6.4 27.3171 6.4H8.18666ZM12.4829 25.6C11.6212 25.6 10.9226 26.3163 10.9226 27.2C10.9226 28.0837 11.6212 28.8 12.4829 28.8C13.3447 28.8 14.0433 28.0837 14.0433 27.2C14.0433 26.3163 13.3447 25.6 12.4829 25.6ZM7.80184 27.2C7.80184 24.549 9.89765 22.4 12.4829 22.4C15.0682 22.4 17.1641 24.549 17.1641 27.2C17.1641 29.851 15.0682 32 12.4829 32C9.89765 32 7.80184 29.851 7.80184 27.2ZM24.9659 25.6C24.1041 25.6 23.4055 26.3163 23.4055 27.2C23.4055 28.0837 24.1041 28.8 24.9659 28.8C25.8277 28.8 26.5263 28.0837 26.5263 27.2C26.5263 26.3163 25.8277 25.6 24.9659 25.6ZM20.2848 27.2C20.2848 24.549 22.3805 22.4 24.9659 22.4C27.5513 22.4 29.647 24.549 29.647 27.2C29.647 29.851 27.5513 32 24.9659 32C22.3805 32 20.2848 29.851 20.2848 27.2Z" class="cor-item-menu"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     <%}%>
                 </nav>

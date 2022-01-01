@@ -10,7 +10,6 @@
     "type": "git",
     "url": "\"\""
   },
-  "type": "module",
   "author": "['Delcio Capolo', 'Leonardo Jorge', 'Mayele Antonio']",
   "license": "MIT",
   "devDependencies": {

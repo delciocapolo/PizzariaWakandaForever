@@ -1,5 +1,6 @@
-import express from 'express';
-import debug from 'debug';
+const express = require('express');
+const debug = require('debug');
+const descricaoPizza = require('./routes/DescPizza');
 
 class Main {
 	constructor() {
@@ -15,10 +16,16 @@ class Main {
 		this.app.set('view engine', 'ejs');
 	}
 	routes() {
-		//A gerencia das rotas todas estao aqui
+		//A gerência das rotas todas estao aqui
 		this.app.get('/', (req, res) => {
 			res.render('home.ejs');
 		});
+
+		try {
+			this.app.use('/informacaoPizza', descricaoPizza);
+		} catch (error) {
+			this.log(`Erro de rota: ${error.message}`);
+		}
 	}
 	inicializador() {
 		this.config();

@@ -8,9 +8,9 @@
 	/* rgb(193, 193, 193) */
 	--primaryLight: #f24e1e;
 	--secundaryLight: #ffffff;
-	--temporality: #0d1321;
+	--temporality: rgb(13, 19, 33);
 	--createEvent: lightgreen;
-	--blackColorText: rgb(0, 0, 0);
+	--blackColorText: rgb(13, 19, 33);
 	--primaryColorText: var(
 		--primaryLight
 	); /*Estou chamando o primaryLight(Que esta la em cima)*/
@@ -38,4 +38,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	object-fit: cover;
+}
+.mg-top {
+	margin: 25px 0 0 0;
 }

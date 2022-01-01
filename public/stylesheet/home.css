@@ -129,6 +129,8 @@
 	margin: 0 0 15px 0;
 }
 .card-sugestao {
+	position: relative;
+	z-index: 100;
 	width: 455px;
 	height: 130px;
 	border-radius: var(--cardSugestaoBorder);
@@ -136,7 +138,7 @@
 	background-color: var(--secundaryLight);
 	box-shadow: 0px 0px 25.1142px rgba(0, 0, 0, 0.14);
 }
-.foto-pizza,
+.card-sugestao .foto-pizza,
 .classificacao {
 	gap: 5px;
 	display: flex;
@@ -164,6 +166,7 @@
 	border-radius: 10px 0 26.9081px 0;
 }
 .detalhes-pizza {
+	border-radius: var(--mediumBorder);
 	flex-direction: column;
 	background-color: transparent !important;
 }
@@ -191,6 +194,121 @@
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
+}
+.box-sugestoes {
+	position: relative;
+}
+.informacao-pizza::after {
+	content: '';
+	position: absolute;
+	bottom: -13px;
+	left: calc(100% - 240px);
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+	background-color: var(--secundaryLight);
+	/* border-bottom: 1px solid var(--primaryLight);
+	border-right: 1px solid var(--primaryLight); */
+	padding: 0.5rem;
+}
+.informacao-pizza {
+	position: absolute;
+	z-index: 500;
+	top: calc(100% - 526px);
+	width: 100%;
+	height: 375px;
+	padding: 0.5rem;
+	background-image: url(/images/Menu/BackgroundSignalPizza.png);
+	background-color: var(--secundaryLight);
+	/* border: 1px solid var(--primaryLight); */
+	border-radius: var(--mediumBorder);
+	transition: 0.3s ease-in;
+
+	opacity: 0;
+	visibility: hidden;
+}
+.descricao-texto-pizza {
+	position: relative;
+	z-index: 110;
+	overflow-y: auto;
+	height: 150px;
+	padding: 0.3rem;
+	border-radius: var(--mediumBorder);
+}
+.flex-left {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.change-text-1,
+.change-text-2,
+.change-text-3,
+.texto-descricao-pizza {
+	text-transform: capitalize;
+	font-family: Helvetica, sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 1rem;
+	color: var(--blackColorText);
+}
+.change-text-2 {
+	font-size: 1.2rem;
+}
+.change-text-3 {
+	font-size: 1.2rem;
+	color: var(--primaryColorText);
+}
+.texto-descricao-pizza {
+	font-size: 0.9rem;
+	text-transform: none;
+	color: rgba(185, 180, 180);
+	text-align: justify;
+}
+.container-btns-actions {
+	width: 100%;
+	background-color: var(--secundaryLight);
+	padding: 0.5rem;
+	justify-content: space-between;
+}
+.svg-send {
+	stroke-width: 5px;
+	fill: var(--primaryLight);
+	transform: translate(-5%, 32%) rotate(-36deg);
+}
+.count-quantidade-pizza {
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: Helvetica, sans-serif;
+	color: var(--blackColorText);
+}
+.add-remove {
+	place-items: center;
+	grid-template-columns: repeat(3, 1fr);
+}
+.btn-action {
+	width: 50px;
+	height: 40px;
+	box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+	background-color: var(--secundaryLight);
+	border-radius: 5px;
+}
+
+.change-detalhes-pizza {
+	flex-direction: row;
+	justify-content: space-between;
+}
+.change-btn-action {
+	width: auto;
+}
+
+.svg-loved {
+	fill: none;
+	stroke: var(--primaryLight);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 32px;
+}
+.svg-loved.actived {
+	fill: var(--primaryLight);
 }
 .box-sugestoes:last-child {
 	display: none;

@@ -4,7 +4,7 @@
 	transform: translateX(0);
 }
 
-/* Menu Lateral */
+/* Home */
 
 .container-tools.actived {
 	height: calc(100% - 90px);
@@ -26,4 +26,8 @@
 }
 .container-tools.actived .container-search {
 	display: block;
+}
+.card-sugestao.actived .informacao-pizza {
+	opacity: 1 !important;
+	visibility: visible !important;
 }
