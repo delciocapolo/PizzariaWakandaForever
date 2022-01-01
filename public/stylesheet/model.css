@@ -10,8 +10,7 @@
 		display: flex;
 	}
 	.navbar {
-		/* width: calc(100% - 750px); */
-		min-width: 400px;
+		min-width: 350px;
 		height: calc(100% - 80px);
 
 		position: fixed;
@@ -22,27 +21,38 @@
 		justify-content: space-around;
 		flex-direction: column;
 
-		background-color: rgba(0, 0, 0, 0.5);
+		/* background-color: rgba(255, 255, 255, 0.5); */
+		background-color: #fff;
+		border-radius: 0 10px 0 0;
 		backdrop-filter: blur(15px);
 		transform: translateX(-100%);
 		transition: 0.3s ease-in;
+	}
+	.item-menuCabecalho {
+		opacity: 0;
 	}
 	.menu-cabecalho,
 	.container-criarConta {
 		flex-direction: column;
 	}
 	.menu-cabecalho {
+		box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.05);
 		align-items: flex-start;
+		background-color: var(--secundaryLight);
+	}
+	.menu-cabecalho:nth-child(n + 2) {
+		display: flex;
 	}
 	.descricao-menu {
 		font-size: 1rem;
+		color: var(--temporality);
 	}
 	.btnLogin {
 		width: 110px;
 		height: 40px;
 		border-radius: var(--totalBorder);
 	}
-	.menu-cabecalho:nth-child(n + 2) {
-		display: flex;
+	.cor-item-menu.actived {
+		fill: var(--temporality);
 	}
 }

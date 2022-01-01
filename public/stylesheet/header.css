@@ -4,9 +4,7 @@
 .cabecalho {
 	position: fixed;
 	z-index: 400;
-
 	width: 100%;
-	background-color: #000;
 }
 .cabecalho,
 .navbar,
@@ -58,8 +56,8 @@
 	background-color: #fff;
 }
 .tamanho-item-menu {
-	width: 28px;
-	height: 28px;
+	width: 25px;
+	height: 25px;
 }
 .cor-item-menu {
 	fill: var(--secundaryLight);
@@ -72,8 +70,6 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: var(--mediumBorder);
-
-	opacity: 0;
 }
 .item-link {
 	gap: 12px;

@@ -1,8 +1,9 @@
 class MenuCima {
-	constructor(menuLateral, btnCaller, item_menuCabecalho) {
+	constructor(menuLateral, btnCaller, item_menuCabecalho, corIconMenu) {
 		this.menuLateral = document.querySelector(menuLateral);
 		this.btnMostrarMenuLateral = document.querySelector(btnCaller);
 		this.allItem_menuCabecalho = document.querySelectorAll(item_menuCabecalho);
+		this.corIconMenu = document.querySelectorAll(corIconMenu);
 
 		this.actived = 'actived'; //eh uma string, que representa a classe (css) .active(no arquivo header.css)
 		this.eventoChamarMenu = this.eventoChamarMenu.bind(this); //O this, sem essa instrucao, estava a referenciar, somente, a class ou o elemnto(btnCaller)! com essa instrucao, o this referencia todos os this ou todos elementos
@@ -10,12 +11,14 @@ class MenuCima {
 
 	eventoChamarMenu() {
 		this.allItem_menuCabecalho.forEach((item, index) => {
-			console.log(`${index / 7 + 0.3}s`);
 			item.style.animation
 				? (item.style.animation = '')
 				: (item.style.animation = `showFake 0.5s ease-in forwards ${
 						index / 7 + 0.01
 				  }s`);
+		});
+		this.corIconMenu.forEach(item => {
+			item.classList.toggle(this.actived);
 		});
 		/**
 		 * Defincao: O metodo toggle, da propriedade classList, permite adicionar ou remover classe ou classes (css) a um elemento HTML
@@ -34,5 +37,10 @@ class MenuCima {
 	}
 }
 
-const Menu = new MenuCima('.navbar', '.mobile-menu', '.item-menuCabecalho');
+const Menu = new MenuCima(
+	'.navbar',
+	'.mobile-menu',
+	'.item-menuCabecalho',
+	'.cor-item-menu'
+);
 Menu.inicializadorClasse();
