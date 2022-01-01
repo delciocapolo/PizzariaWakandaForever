@@ -17,19 +17,24 @@ class MenuCima {
 	}
 
 	eventoChamarMenu() {
+		function checkClass(element) {
+			element.forEach(item => {
+				item.classList.toggle(this.actived);
+			});
+		}
+
+		checkClass = checkClass.bind(this);
+
 		this.allItem_menuCabecalho.forEach((item, index) => {
 			item.style.animation
 				? (item.style.animation = '')
 				: (item.style.animation = `showFake 0.5s ease-in forwards ${
-						index / 7 + 0.01
+						index / 7 + 0.001
 				  }s`);
 		});
-		this.setasMobileMenu.forEach(item => {
-			item.classList.toggle(this.actived);
-		});
-		this.corIconMenu.forEach(item => {
-			item.classList.toggle(this.actived);
-		});
+
+		checkClass(this.setasMobileMenu);
+		checkClass(this.corIconMenu);
 		/**
 		 * Defincao: O metodo toggle, da propriedade classList, permite adicionar ou remover classe ou classes (css) a um elemento HTML
 		 * Condicao: Se a classe(css), ja existir, o toogle remove. Se nao existir o toggle adiciona
