@@ -10,15 +10,16 @@
 		display: flex;
 	}
 	.navbar {
-		min-width: 350px;
-		height: calc(100% - 80px);
+		min-width: 370px;
+		height: 100%;
 
 		position: fixed;
+		top: 0;
 		z-index: 999;
 
 		gap: 0;
 		align-items: flex-start;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-direction: column;
 
 		background-color: var(--secundaryLight);
@@ -39,7 +40,8 @@
 		align-items: flex-start;
 		background-color: var(--secundaryLight);
 	}
-	.menu-cabecalho:nth-child(n + 2) {
+	.menu-cabecalho:nth-child(n + 3),
+	.container-close-menu {
 		display: flex;
 	}
 	.descricao-menu {
@@ -64,8 +66,15 @@
 		border: 2px solid var(--temporality);
 		color: var(--temporality);
 	}
+	/* .box-search,
+	.txtPesquisaPizza {
+		width: 350px;
+	} */
+	.container-opcoes-menu {
+		gap: 35px;
+		flex-direction: column;
+	}
 }
-
 @media screen and (max-width: 1384px) and (min-width: 709px) {
 	/* Ness trecho de codigo, estou criando um intervalo entre 1384 e 709 */
 	.box-sugestoes:last-child {

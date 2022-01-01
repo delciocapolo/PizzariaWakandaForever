@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Wakanda Forever</title>
+    <link rel="stylesheet" href="/stylesheet/allInOne.css">
+    <script src="/script/header.js" defer></script>
+    <script src="/script/home.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <section class="container-welcome">
+            <%-include('partials/header.ejs')%> <!--Este eh o cabecalho-->
+            <article class="welcome backgroundImage">
+                <div class="fillSpace"></div>
+                <div class="logo display-flex">
+                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link-logo">Pizzaria Wakanda <br>Forever</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer" class="link-logo">Pizzaria Wakanda <br>Forever</a>
+                </div>
+            </article>
+            <article class="container-tools">
+                <div class="tools display-flex">
+                    <button class="seta-tools display-flex addEventSeta" type="button">
+                        <svg viewBox="0 0 30 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="tamanho-item-menu seta-cima">
+                            <path d="M4.56652 9.96304L14.9132 3.8197L25.2599 9.96304C25.5067 10.1096 25.7998 10.2259 26.1224 10.3052C26.445 10.3846 26.7907 10.4254 27.1398 10.4254C27.489 10.4254 27.8347 10.3846 28.1573 10.3052C28.4799 10.2259 28.773 10.1096 29.0198 9.96304C29.2667 9.81645 29.4626 9.64242 29.5962 9.4509C29.7298 9.25937 29.7986 9.05409 29.7986 8.84679C29.7986 8.63948 29.7298 8.4342 29.5962 8.24268C29.4626 8.05115 29.2667 7.87712 29.0198 7.73054L16.7798 0.463037C16.5331 0.316256 16.2401 0.199806 15.9175 0.120352C15.5949 0.0408978 15.2491 0 14.8998 0C14.5506 0 14.2048 0.0408978 13.8822 0.120352C13.5596 0.199806 13.2666 0.316256 13.0198 0.463037L0.77985 7.73054C0.532641 7.87702 0.336514 8.05101 0.202696 8.24255C0.0688793 8.43409 0 8.63942 0 8.84679C0 9.05415 0.0688793 9.25948 0.202696 9.45103C0.336514 9.64257 0.532641 9.81656 0.77985 9.96304C1.81985 10.5647 3.52652 10.5805 4.56652 9.96304Z" fill="#F24E1E"/>
+                        </svg>
+                        <div class="line-tools"></div>
+                    </button>
+                    <div class="text-sugestoes">
+                        <h1 class="txtSugestoes">Sugestões</h1>
+                    </div>
+                </div>
+                <div class="container-search">
+                    <form class="box-search display-flex" action="" method="post">
+                        <input type="search" name="txtPesquisaPizza" class="txtPesquisaPizza" placeholder="Pesquise por alguma Pizza">
+                        <button type="submit" value="Pesquisar" class="btnPesquisarPizza">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="tamanho-item-menu">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0225 12.5113C25.0225 5.60149 19.4212 0 12.5113 0C5.60149 0 0 5.60149 0 12.5113C0 19.4212 5.60149 25.0225 12.5113 25.0225C15.3582 25.0225 17.9849 24.0703 20.0871 22.4689L29.1249 31.5067C29.7826 32.1644 30.8491 32.1644 31.5067 31.5067C32.1644 30.8491 32.1644 29.7826 31.5067 29.1249L22.4689 20.0871C24.0703 17.9849 25.0225 15.3582 25.0225 12.5113ZM12.5113 3.36843C17.5608 3.36843 21.6541 7.46182 21.6541 12.5113C21.6541 15.0365 20.6326 17.3199 18.9764 18.9764C17.3199 20.6326 15.0365 21.6541 12.5113 21.6541C7.46182 21.6541 3.36843 17.5608 3.36843 12.5113C3.36843 7.46182 7.46182 3.36843 12.5113 3.36843Z" class="cor-item-menu"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <nav class="resultados-pesquisa"></nav>
+                </div>
+                <nav class="container-sugestoes display-flex">
+                    <%for(let i = 0; i < 4; i++) {%>
+                        <div class="box-sugestoes">
+                            <div class="card-sugestao display-grid">
+                                <div class="foto-pizza">
+                                    <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
+                                </div>
+                                <div class="detalhes-pizza display-flex">
+                                    <h1 class="title">Pizza-Omolete</h1>
+                                    <h2 class="price">2000,00kz</h2>
+                                    <div class="classificacao">
+                                        <span class="avalicao-numero">4.1</span>
+                                        <div class="images-estrela-avalicao display-flex">
+                                            <%for(let i = 0; i < 5; i++) {%>
+                                                <div class="avalicao-estrela">
+                                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.87222 1.09002C6.37466 0.136657 7.75326 0.13666 8.2557 1.09002L9.5935 3.62846C9.59616 3.63351 9.60113 3.63697 9.60683 3.63774L12.5338 4.03603C13.6592 4.18917 14.097 5.56916 13.262 6.33137L11.1932 8.21979C11.1888 8.22386 11.1867 8.22992 11.1878 8.23584L11.6827 10.9379C11.8799 12.0148 10.7517 12.8534 9.76148 12.3659L7.07187 11.0418C7.06689 11.0393 7.06103 11.0393 7.05605 11.0418L4.36644 12.3659C3.37622 12.8534 2.24798 12.0148 2.44522 10.9379L2.9401 8.23584C2.94119 8.22992 2.93914 8.22386 2.93467 8.21978L0.8659 6.33137C0.0308934 5.56916 0.468712 4.18917 1.59412 4.03603L4.52109 3.63774C4.52679 3.63697 4.53176 3.63351 4.53442 3.62846L5.87222 1.09002Z" fill="#F24E1E" stroke="#F24E1E"/>
+                                                    </svg>
+                                                </div>
+                                            <%}%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-carrinho-sugestao">
+                                    <button type="button" class="carrinho-sugestao display-flex">
+                                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="tamanho-item-menu">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.6C0 0.716344 0.6986 0 1.56037 0H2.75238C4.52546 0 6.14635 1.02721 6.93929 2.65338L7.20583 3.2H27.3171C30.3117 3.2 32.5363 6.0436 31.8866 9.04126L30.1529 17.0413C29.677 19.2374 27.7774 20.8 25.5833 20.8H11.8656C9.67156 20.8 7.7719 19.2374 7.29594 17.0413L4.75994 5.33936L4.14802 4.08446C3.88371 3.5424 3.3434 3.2 2.75238 3.2H1.56037C0.6986 3.2 0 2.48365 0 1.6ZM8.18666 6.4L10.3424 16.347C10.501 17.0792 11.1342 17.6 11.8656 17.6H25.5833C26.3147 17.6 26.9479 17.0792 27.1064 16.347L28.8403 8.34709C29.0567 7.34787 28.3152 6.4 27.3171 6.4H8.18666ZM12.4829 25.6C11.6212 25.6 10.9226 26.3163 10.9226 27.2C10.9226 28.0837 11.6212 28.8 12.4829 28.8C13.3447 28.8 14.0433 28.0837 14.0433 27.2C14.0433 26.3163 13.3447 25.6 12.4829 25.6ZM7.80184 27.2C7.80184 24.549 9.89765 22.4 12.4829 22.4C15.0682 22.4 17.1641 24.549 17.1641 27.2C17.1641 29.851 15.0682 32 12.4829 32C9.89765 32 7.80184 29.851 7.80184 27.2ZM24.9659 25.6C24.1041 25.6 23.4055 26.3163 23.4055 27.2C23.4055 28.0837 24.1041 28.8 24.9659 28.8C25.8277 28.8 26.5263 28.0837 26.5263 27.2C26.5263 26.3163 25.8277 25.6 24.9659 25.6ZM20.2848 27.2C20.2848 24.549 22.3805 22.4 24.9659 22.4C27.5513 22.4 29.647 24.549 29.647 27.2C29.647 29.851 27.5513 32 24.9659 32C22.3805 32 20.2848 29.851 20.2848 27.2Z" class="cor-item-menu"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-sugestao display-grid">
+                                <div class="foto-pizza">
+                                    <img src="/images/Menu/Pizzas/image1.jpg" alt="Uma Imagem">
+                                </div>
+                                <div class="detalhes-pizza display-flex">
+                                    <h1 class="title">Pizza-Omolete</h1>
+                                    <h2 class="price">2000,00kz</h2>
+                                    <div class="classificacao">
+                                        <span class="avalicao-numero">4.1</span>
+                                        <div class="images-estrela-avalicao display-flex">
+                                            <%for(let i = 0; i < 5; i++) {%>
+                                                <div class="avalicao-estrela">
+                                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.87222 1.09002C6.37466 0.136657 7.75326 0.13666 8.2557 1.09002L9.5935 3.62846C9.59616 3.63351 9.60113 3.63697 9.60683 3.63774L12.5338 4.03603C13.6592 4.18917 14.097 5.56916 13.262 6.33137L11.1932 8.21979C11.1888 8.22386 11.1867 8.22992 11.1878 8.23584L11.6827 10.9379C11.8799 12.0148 10.7517 12.8534 9.76148 12.3659L7.07187 11.0418C7.06689 11.0393 7.06103 11.0393 7.05605 11.0418L4.36644 12.3659C3.37622 12.8534 2.24798 12.0148 2.44522 10.9379L2.9401 8.23584C2.94119 8.22992 2.93914 8.22386 2.93467 8.21978L0.8659 6.33137C0.0308934 5.56916 0.468712 4.18917 1.59412 4.03603L4.52109 3.63774C4.52679 3.63697 4.53176 3.63351 4.53442 3.62846L5.87222 1.09002Z" fill="#F24E1E" stroke="#F24E1E"/>
+                                                    </svg>
+                                                </div>
+                                            <%}%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-carrinho-sugestao">
+                                    <button type="button" class="carrinho-sugestao display-flex">
+                                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="tamanho-item-menu">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.6C0 0.716344 0.6986 0 1.56037 0H2.75238C4.52546 0 6.14635 1.02721 6.93929 2.65338L7.20583 3.2H27.3171C30.3117 3.2 32.5363 6.0436 31.8866 9.04126L30.1529 17.0413C29.677 19.2374 27.7774 20.8 25.5833 20.8H11.8656C9.67156 20.8 7.7719 19.2374 7.29594 17.0413L4.75994 5.33936L4.14802 4.08446C3.88371 3.5424 3.3434 3.2 2.75238 3.2H1.56037C0.6986 3.2 0 2.48365 0 1.6ZM8.18666 6.4L10.3424 16.347C10.501 17.0792 11.1342 17.6 11.8656 17.6H25.5833C26.3147 17.6 26.9479 17.0792 27.1064 16.347L28.8403 8.34709C29.0567 7.34787 28.3152 6.4 27.3171 6.4H8.18666ZM12.4829 25.6C11.6212 25.6 10.9226 26.3163 10.9226 27.2C10.9226 28.0837 11.6212 28.8 12.4829 28.8C13.3447 28.8 14.0433 28.0837 14.0433 27.2C14.0433 26.3163 13.3447 25.6 12.4829 25.6ZM7.80184 27.2C7.80184 24.549 9.89765 22.4 12.4829 22.4C15.0682 22.4 17.1641 24.549 17.1641 27.2C17.1641 29.851 15.0682 32 12.4829 32C9.89765 32 7.80184 29.851 7.80184 27.2ZM24.9659 25.6C24.1041 25.6 23.4055 26.3163 23.4055 27.2C23.4055 28.0837 24.1041 28.8 24.9659 28.8C25.8277 28.8 26.5263 28.0837 26.5263 27.2C26.5263 26.3163 25.8277 25.6 24.9659 25.6ZM20.2848 27.2C20.2848 24.549 22.3805 22.4 24.9659 22.4C27.5513 22.4 29.647 24.549 29.647 27.2C29.647 29.851 27.5513 32 24.9659 32C22.3805 32 20.2848 29.851 20.2848 27.2Z" class="cor-item-menu"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    <%}%>
+                </nav>
+            </article>
+        </section>
+        <!-- <section class="comentarios-usuarios">
+            <%for(let i = 1; i <= 3; i++){%>
+                <div class="box-comentario display-flex">
+                    <article class="container-comentario">
+                        <div class="dados-usuario-comentario display-flex">
+                            <div class="foto-usuario-comentario">
+                                <img src="/images/Menu/User/user1.png" alt="Imagem" class="img-comentador">
+                            </div> 
+                            <div class="informacao-usuario-comentario display-flex">
+                                <a href="http://" target="_blank"  class="link-bio-comentador">Delcio Capolo</a>
+                                <span class="data-comentario">2023.05.12 21h.33min</span>
+                            </div>
+                        </div>
+                        <div class="descricao-comentario">
+                            <p class="txt-comentario">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                                Labore quasi possimus sint similique molestiae quisquam error non ab inventore accusamus? Facilis aliquam obcaecati eaque soluta nam, fugit accusantium perferendis molestias?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quasi possimus sint similique molestiae quisquam error non ab inventore accusamus?<br> 
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            <%}%>
+        </section> -->
+    </main>
+</body>
+</html>
+
+

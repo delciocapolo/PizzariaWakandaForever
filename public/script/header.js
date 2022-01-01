@@ -4,13 +4,13 @@ class MenuCima {
 		btnCaller,
 		item_menuCabecalho,
 		corIconMenu,
-		setasMobileMenu
+		itemDescricao
 	) {
 		this.menuLateral = document.querySelector(menuLateral);
-		this.btnMostrarMenuLateral = document.querySelector(btnCaller);
+		this.btnChamadorMenu = document.querySelectorAll(btnCaller);
 		this.allItem_menuCabecalho = document.querySelectorAll(item_menuCabecalho);
 		this.corIconMenu = document.querySelectorAll(corIconMenu);
-		this.setasMobileMenu = document.querySelectorAll(setasMobileMenu);
+		this.itemDescricao = document.querySelectorAll(itemDescricao);
 
 		this.actived = 'actived'; //eh uma string, que representa a classe (css) .active(no arquivo header.css)
 		this.eventoChamarMenu = this.eventoChamarMenu.bind(this); //O this, sem essa instrucao, estava a referenciar, somente, a class ou o elemnto(btnCaller)! com essa instrucao, o this referencia todos os this ou todos elementos
@@ -22,18 +22,22 @@ class MenuCima {
 				item.classList.toggle(this.actived);
 			});
 		}
+		function checkAnimacao(element) {
+			element.forEach((item, index) => {
+				item.style.animation
+					? (item.style.animation = '')
+					: (item.style.animation = `showFake 0.5s ease-in forwards ${
+							index / 7 + 0.001
+					  }s`);
+			});
+		}
 
 		checkClass = checkClass.bind(this);
+		checkAnimacao = checkAnimacao.bind(this);
 
-		this.allItem_menuCabecalho.forEach((item, index) => {
-			item.style.animation
-				? (item.style.animation = '')
-				: (item.style.animation = `showFake 0.5s ease-in forwards ${
-						index / 7 + 0.001
-				  }s`);
-		});
+		checkAnimacao(this.allItem_menuCabecalho);
+		checkAnimacao(this.itemDescricao);
 
-		checkClass(this.setasMobileMenu);
 		checkClass(this.corIconMenu);
 		/**
 		 * Defincao: O metodo toggle, da propriedade classList, permite adicionar ou remover classe ou classes (css) a um elemento HTML
@@ -42,10 +46,12 @@ class MenuCima {
 		this.menuLateral.classList.toggle(this.actived);
 	}
 	addEventClickMenuLateral() {
-		this.btnMostrarMenuLateral.addEventListener('click', this.eventoChamarMenu); //Tou adicionando evento click ao menu, responsivo, e a chamar a funcao (eventoChamarMenu)
+		this.btnChamadorMenu.forEach(chamador =>
+			chamador.addEventListener('click', this.eventoChamarMenu)
+		); //Tou adicionando evento click ao menu, responsivo, e a chamar a funcao (eventoChamarMenu)
 	}
 	inicializadorClasse() {
-		if (this.btnMostrarMenuLateral) {
+		if (this.btnChamadorMenu) {
 			//Para verificar se o elemento existe no HTML ou no DOM(Document Object Model(todo codigo HTML))
 			this.addEventClickMenuLateral();
 		}
@@ -57,6 +63,6 @@ const Menu = new MenuCima(
 	'.mobile-menu',
 	'.item-menuCabecalho',
 	'.cor-item-menu',
-	'.container-line-menu'
+	'.item-descricao-menu'
 );
 Menu.inicializadorClasse();

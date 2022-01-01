@@ -1,0 +1,29 @@
+/* Header */
+
+.navbar.actived {
+	transform: translateX(0);
+}
+
+/* Menu Lateral */
+
+.container-tools.actived {
+	height: calc(100% - 90px);
+}
+.whenActivedHide.hide {
+	display: none;
+}
+.container-tools.actived .seta-cima {
+	display: none;
+}
+.container-tools.actived .line-tools {
+	display: block;
+}
+
+.container-tools.actived .container-sugestoes,
+.container-tools.actived .txtSugestoes {
+	display: none;
+	font-size: 0;
+}
+.container-tools.actived .container-search {
+	display: block;
+}

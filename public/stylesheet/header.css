@@ -20,9 +20,6 @@
 	flex-wrap: wrap;
 	justify-content: flex-end;
 }
-.navbar.actived {
-	transform: translateX(0);
-}
 .menu-cabecalho,
 .container-criarConta {
 	flex-wrap: wrap;
@@ -33,7 +30,7 @@
 	width: 350px;
 	justify-content: space-between;
 }
-.menu-cabecalho:nth-child(n + 2) {
+.menu-cabecalho:nth-child(n + 3) {
 	display: none;
 }
 .container-criarConta {
@@ -50,8 +47,6 @@
 .btnLogin {
 	width: 45px;
 	height: 45px;
-	/* border-radius: 0 50px 50px 0; */
-	/* border: 2px solid #fff; */
 	border-radius: 50%;
 	background-color: #fff;
 }
@@ -78,27 +73,7 @@
 	padding: 0.5rem 0.7rem;
 	border-radius: var(--mediumBorder);
 	transition: 0.3s ease-in;
-	/* background-color: rgba(0, 0, 0, 0.1); */
 }
-/* .item-link:hover::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	visibility: hidden;
-	transition: 0.5s ease-in;
-	border-radius: 5px 5px 0 0;
-	border-bottom: 2px solid #000;
-}
-.item-menuCabecalho:hover .item-link::before {
-	opacity: 1;
-	visibility: visible;
-	background-color: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(0.5px);
-} */
 .mobile-menu {
 	display: none;
 	width: 75px;
@@ -132,21 +107,12 @@
 	border-radius: 10px 10px 0 0;
 	justify-content: flex-end;
 }
-.container-line-menu:nth-child(1).actived {
-	transform: rotate(45deg) translate(3%, 0);
-}
 .container-line-menu:nth-child(2) {
 	justify-content: flex-start;
-}
-.container-line-menu:nth-child(2).actived {
-	transform: translate(0%, -8%);
 }
 .container-line-menu:nth-child(3) {
 	border-radius: 0 0 10px 10px;
 	justify-content: flex-end;
-}
-.container-line-menu:nth-child(3).actived {
-	transform: rotate(-45deg) translate(5%, -11%);
 }
 .descricao-menu {
 	color: var(--secundaryColorText);
@@ -155,4 +121,37 @@
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-weight: 500;
+}
+.container-opcoes-menu {
+	padding: 0.5rem 0;
+	gap: 0;
+}
+.item-descricao-menu {
+	width: 100%;
+	border-radius: var(--mediumBorder);
+}
+.descricao-opcao-menu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2rem;
+	font-weight: 900;
+	padding: 0.5rem 0.7rem;
+	border-radius: var(--mediumBorder);
+}
+.container-close-menu {
+	display: none;
+	width: 100%;
+	padding: 0.5rem 0;
+	border-radius: 10px 10px 0 0;
+}
+.div-clone-one {
+	transform: rotate(45deg) translate(3%, 0);
+}
+.div-clone-two {
+	transform: translate(0%, -8%);
+}
+.div-clone-three {
+	transform: rotate(-45deg) translate(5%, -11%);
+}
+.div-container-close div {
+	background-color: #000;
 }
