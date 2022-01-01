@@ -5,9 +5,10 @@
         * #1d2d44
         * #120d31
     */
+	/* rgb(193, 193, 193) */
 	--primaryLight: #f24e1e;
 	--secundaryLight: #ffffff;
-	--temporality: rgb(193, 193, 193);
+	--temporality: #0d1321;
 	--createEvent: lightgreen;
 	--blackColorText: rgb(0, 0, 0);
 	--primaryColorText: var(

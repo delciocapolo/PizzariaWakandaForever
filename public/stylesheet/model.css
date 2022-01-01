@@ -21,8 +21,7 @@
 		justify-content: space-around;
 		flex-direction: column;
 
-		/* background-color: rgba(255, 255, 255, 0.5); */
-		background-color: #fff;
+		background-color: var(--secundaryLight);
 		border-radius: 0 10px 0 0;
 		backdrop-filter: blur(15px);
 		transform: translateX(-100%);
@@ -68,6 +67,7 @@
 }
 
 @media screen and (max-width: 1384px) and (min-width: 709px) {
+	/* Ness trecho de codigo, estou criando um intervalo entre 1384 e 709 */
 	.box-sugestoes:last-child {
 		display: block;
 	}
