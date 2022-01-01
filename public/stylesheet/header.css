@@ -22,7 +22,9 @@
 	justify-content: flex-end;
 }
 .navbar.actived {
-	transform: translateY(0);
+	transform: translateX(0);
+	/* opacity: 1;
+	visibility: visible; */
 }
 .menu-cabecalho,
 .container-criarConta {
@@ -69,6 +71,8 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: var(--mediumBorder);
+
+	opacity: 0;
 }
 .item-link {
 	position: relative;
@@ -135,4 +139,13 @@
 .container-line-menu:nth-child(3) {
 	border-radius: 0 0 10px 10px;
 	justify-content: flex-end;
+}
+
+@keyframes showFake {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
