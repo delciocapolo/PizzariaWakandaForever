@@ -14,17 +14,16 @@
 	height: 80px;
 }
 .navbar {
-	gap: 50px;
-	flex-wrap: wrap;
 	max-width: 1350px;
 	padding: 0 0.5rem;
 	margin: auto;
+
+	gap: 50px;
+	flex-wrap: wrap;
 	justify-content: flex-end;
 }
 .navbar.actived {
 	transform: translateX(0);
-	/* opacity: 1;
-	visibility: visible; */
 }
 .menu-cabecalho,
 .container-criarConta {
@@ -36,7 +35,9 @@
 	width: 350px;
 	justify-content: space-between;
 }
-
+.menu-cabecalho:nth-child(n + 2) {
+	display: none;
+}
 .container-criarConta {
 	border-radius: var(--totalBorder);
 }
@@ -61,7 +62,7 @@
 	height: 28px;
 }
 .cor-item-menu {
-	fill: #fff;
+	fill: var(--secundaryLight);
 }
 .cor-extra {
 	fill: #000;
@@ -153,7 +154,7 @@
 
 .descricao-menu {
 	color: var(--secundaryColorText);
-	font-size: 1rem;
+	font-size: 0;
 	text-transform: capitalize;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

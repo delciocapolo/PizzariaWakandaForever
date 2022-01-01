@@ -10,18 +10,20 @@
 		display: flex;
 	}
 	.navbar {
+		/* width: calc(100% - 750px); */
+		min-width: 400px;
+		height: calc(100% - 80px);
+
 		position: fixed;
 		z-index: 999;
-		width: calc(100% - 500px);
-		min-width: 450px;
-		height: calc(100% - 80px);
+
 		gap: 0;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-direction: column;
+
 		background-color: rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(15px);
-
 		transform: translateX(-100%);
 		transition: 0.3s ease-in;
 	}
@@ -32,9 +34,15 @@
 	.menu-cabecalho {
 		align-items: flex-start;
 	}
+	.descricao-menu {
+		font-size: 1rem;
+	}
 	.btnLogin {
 		width: 110px;
 		height: 40px;
 		border-radius: var(--totalBorder);
+	}
+	.menu-cabecalho:nth-child(n + 2) {
+		display: flex;
 	}
 }
