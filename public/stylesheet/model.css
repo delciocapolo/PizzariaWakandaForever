@@ -55,4 +55,20 @@
 	.cor-item-menu.actived {
 		fill: var(--temporality);
 	}
+	.btnLogin {
+		background-color: var(--temporality);
+	}
+	.cor-extra {
+		fill: var(--secundaryLight) !important;
+	}
+	.btnCriarConta {
+		border: 2px solid var(--temporality);
+		color: var(--temporality);
+	}
+}
+
+@media screen and (max-width: 1384px) and (min-width: 709px) {
+	.box-sugestoes:last-child {
+		display: block;
+	}
 }

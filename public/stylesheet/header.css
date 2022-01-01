@@ -60,6 +60,7 @@
 	height: 25px;
 }
 .cor-item-menu {
+	stroke-width: 5px;
 	fill: var(--secundaryLight);
 }
 .cor-extra {
