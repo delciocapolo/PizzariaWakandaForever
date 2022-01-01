@@ -1,14 +1,36 @@
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 940px) {
+	.card-sugestao {
+		width: 350px;
+	}
+	.title,
+	.price {
+		font-size: 1rem;
+	}
 	.mobile-menu {
-		display: block;
+		display: flex;
 	}
 	.navbar {
 		position: fixed;
-		z-index: 600;
-		width: 100%;
+		z-index: 999;
+		width: calc(100% - 500px);
 		height: 100%;
+		gap: 0;
+		align-items: flex-start;
+		justify-content: flex-start;
+		background-color: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(15px);
+		transform: translateY(-110%);
 	}
-	.navbar {
-		background-color: aqua;
+	.menu-cabecalho,
+	.container-criarConta {
+		flex-direction: column;
+	}
+	.menu-cabecalho {
+		align-items: flex-start;
+	}
+	.btnLogin {
+		width: 110px;
+		height: 40px;
+		border-radius: var(--totalBorder);
 	}
 }

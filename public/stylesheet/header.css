@@ -2,9 +2,9 @@
 	width: 100%;
 }
 .cabecalho {
-	z-index: 400;
 	position: fixed;
-	top: 0;
+	z-index: 400;
+
 	width: 100%;
 	background-color: #000;
 }
@@ -20,6 +20,9 @@
 	padding: 0 0.5rem;
 	margin: auto;
 	justify-content: flex-end;
+}
+.navbar.actived {
+	transform: translateY(0);
 }
 .menu-cabecalho,
 .container-criarConta {
@@ -95,15 +98,25 @@
 } */
 .mobile-menu {
 	display: none;
+	width: 75px;
+	height: 100%;
+
+	gap: 0;
+	flex-direction: column;
 
 	border-radius: var(--mediumBorder);
-	padding: 0.1rem;
+	padding: 0.2rem 0.1rem;
 	cursor: pointer;
 }
 .container-line-menu {
 	width: 55px;
 	height: 12px;
 	margin: 1px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
 }
 .line-menu {
 	width: 22px;

@@ -114,7 +114,6 @@
 	border-radius: var(--totalBorder);
 	background-color: var(--primaryLight);
 }
-
 .container-sugestoes {
 	gap: 10px;
 	flex-wrap: wrap;
@@ -174,9 +173,7 @@
 	font-family: Arial, Helvetica, sans-serif;
 	color: var(--primaryColorText);
 }
-.title {
-	font-size: 1.2rem;
-}
+.title,
 .price {
 	font-size: 1.2rem;
 }
