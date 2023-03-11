@@ -1,0 +1,36 @@
+:root {
+	/* 
+        --Cores para serem usadas no Mood Dark(Modo Escuro)
+        * #0d1321
+        * #1d2d44
+        * #120d31
+    */
+	--primaryLight: #f24e1e;
+	--secundaryLight: #ffffff;
+	--createEvent: lightgreen;
+	--blackColorText: rgb(0, 0, 0);
+	--primaryColorText: var(
+		--primaryLight
+	); /*Estou chamando o primaryLight(Que esta la em cima)*/
+	--mediumBorder: 10px;
+	--totalBorder: 50px;
+	--cardSugestaoBorder: 26.9081px;
+}
+
+.display-flex {
+	gap: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.display-grid {
+	gap: 10px;
+	display: grid;
+	place-content: center;
+}
+.backgroundImage {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+}

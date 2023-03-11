@@ -1,0 +1,94 @@
+.fillSpace {
+	width: 100%;
+}
+.cabecalho {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.cabecalho,
+.navbar,
+.fillSpace {
+	height: 80px;
+}
+.navbar {
+	gap: 50px;
+	flex-wrap: wrap;
+	max-width: 1350px;
+	padding: 0 0.5rem;
+	margin: auto;
+	justify-content: flex-end;
+}
+.menu-cabecalho,
+.container-criarConta {
+	flex-wrap: wrap;
+	padding: 0.3rem;
+	border-radius: var(--mediumBorder);
+}
+.menu-cabecalho {
+	width: 350px;
+	justify-content: space-between;
+}
+
+.container-criarConta {
+	border-radius: var(--totalBorder);
+}
+.btnCriarConta {
+	width: 110px;
+	height: 40px;
+	background-color: transparent;
+	border: 2px solid var(--secundaryLight);
+	color: var(--secundaryLight);
+	border-radius: var(--totalBorder);
+}
+.btnLogin {
+	width: 45px;
+	height: 45px;
+	/* border-radius: 0 50px 50px 0; */
+	/* border: 2px solid #fff; */
+	border-radius: 50%;
+	background-color: #fff;
+}
+.tamanho-item-menu {
+	width: 28px;
+	height: 28px;
+}
+.cor-item-menu {
+	fill: #fff;
+}
+.cor-extra {
+	fill: #000;
+}
+.item-menuCabecalho {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--mediumBorder);
+}
+.item-link {
+	position: relative;
+	padding: 0.5rem 0.7rem;
+	border-radius: var(--mediumBorder);
+	transition: 0.3s ease-in;
+	/* background-color: rgba(0, 0, 0, 0.1); */
+}
+/* .item-link:hover::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s ease-in;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 2px solid #000;
+}
+.item-menuCabecalho:hover .item-link::before {
+	opacity: 1;
+	visibility: visible;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(0.5px);
+} */
