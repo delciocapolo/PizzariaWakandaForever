@@ -11,6 +11,9 @@ body {
 	min-height: 100vh !important;
 	width: 100% !important;
 }
+::-webkit-scrollbar {
+	display: none;
+}
 li {
 	list-style: none;
 }
